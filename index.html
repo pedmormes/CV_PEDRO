@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Currículum Vitae</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "section aside"
+                "footer footer";
+            grid-template-columns: 2fr 1fr;
+        }
+
+        /* Header */
+        header {
+            grid-area: header;
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ecf0f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: #bdc3c7;
+            border: 4px solid #34495e;
+        }
+
+        .perfil img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .header-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header-info p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Section Principal */
+        section {
+            grid-area: section;
+            padding: 40px;
+        }
+
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        .contenido {
+            margin-bottom: 30px;
+        }
+
+        .job, .edu {
+            margin-bottom: 15px;
+        }
+
+        .job h3, .edu h3 {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        /* Aside */
+        aside {
+            grid-area: aside;
+            background-color: #fcfcfc;
+            padding: 40px;
+            border-left: 1px solid #eee;
+        }
+
+        .list-unstyled {
+            list-style: none;
+        }
+
+        .list-unstyled li {
+            background: #ecf0f1;
+            margin-bottom: 8px;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            grid-area: footer;
+            background-color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        footer a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas: 
+                    "header"
+                    "section"
+                    "aside"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            aside {
+                border-left: none;
+                border-top: 1px solid #eee;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- CAPA HEADER -->
+        <header>
+            <div class="perfil"><img src="WhatsApp Image 2026-05-12 at 16.41.10.jpeg" alt=""></div>
+            <div class="header-info">
+                <h1>Pedro Morilla Mesones</h1>
+                <p>📧 pedmormes@gmail.com | 📱 +34 617 64 01 53</p>
+                <p>📍 Córdoba, España</p>
+            </div>
+        </header>
+
+        <!-- CAPA SECTION -->
+        <section>
+            <div class="contenido">
+                <h2>Sobre mí</h2>
+                <p></p>
+            </div>
+
+            <div class="contenido">
+                <h2>Experiencia Laboral</h2>
+                <div class="job">
+                </div>
+                <div class="job">
+
+                </div>
+            </div>
+
+            <div class="contenido">
+                <h2>Formación Académica</h2>
+                <div class="edu">
+                    <h3>ESO</h3>
+                    <p>IES Luna de la Sierra (Adamuz) - 2014-2022</p>
+                </div>
+                <div class="edu">
+                    <h3>Grado Medio en Sistemas Microinformáticos y Redes</h3>
+                    <p>IES Medina Azahara (Córdoba) - 2022-2025</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAPA ASIDE -->
+        <aside>
+            <div class="contenido">
+                <h2>Habilidades</h2>
+                <ul class="list-unstyled">
+                    <li>HTML5 / CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>Git</li>
+                </ul>
+            </div>
+
+            <div class="contenido">
+                <h2>Idiomas</h2>
+                <ul class="list-unstyled">
+                    <li>Español (Nativo)</li>
+                    <li>Inglés (Nivel B1)</li>
+
+                </ul>
+            </div>
+        </aside>
+
+        <!-- CAPA FOOTER -->
+        <footer>
+            <a href="https://www.linkedin.com/in/usuario" target="_blank">LinkedIn</a>
+            <a href="https://www.portfolio.com" target="_blank">Mi Portfolio</a>
+            <a href="mailto:pedmormes@gmail.com">Contacto Directo</a>
+        </footer>
+    </div>
+
+</body>
+</html>
